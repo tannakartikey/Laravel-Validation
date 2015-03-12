@@ -2,6 +2,7 @@
 
 use Illuminate\Validation\Factory;
 use Dakshhmehta\LaravelValidation\Exceptions\ValidationException;
+use Dakshhmehta\Helpers\Template;
 
 abstract class AbstractValidator {
 	protected $input = array();
@@ -69,6 +70,8 @@ abstract class AbstractValidator {
 	 */ 
 	public function jQuery($selector, $rules = null)
 	{
+		Template::addJS(asset('plugins/jquery-validation/dist/jquery.validate.min.js'));
+
 		if($rules == null){
 			$this->rules = $this->getRules();
 		}
@@ -81,12 +84,12 @@ abstract class AbstractValidator {
 		$js .= "
 				ignore: '',
 				errorElement: 'span',
-				errorClass: 'validate-has-error',
+				errorClass: 'help-block',
 				highlight: function (element) {
-					$(element).closest('.form-group').addClass('validate-has-error');
+					$(element).closest('.form-group').addClass('has-error');
 				},
 				unhighlight: function (element) {
-					$(element).closest('.form-group').removeClass('validate-has-error');
+					$(element).closest('.form-group').removeClass('has-error');
 				},
 				errorPlacement: function (error, element)
 				{

@@ -1,6 +1,6 @@
 {
     "name": "dakshhmehta/laravel-validation",
-    "description": "",
+    "description": "Laravel validation layers that can integrate with jQuery validation",
     "authors": [
         {
             "name": "Daksh Mehta",
@@ -9,7 +9,8 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "4.2.*"
+        "illuminate/support": "4.2.*",
+        "dakshhmehta/helpers": "dev-master",
     },
     "autoload": {
         "classmap": [
