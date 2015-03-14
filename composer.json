@@ -10,12 +10,9 @@
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "4.2.*",
-        "dakshhmehta/helpers": "dev-master",
+        "dakshhmehta/helpers": "dev-master"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
         "psr-0": {
             "Dakshhmehta\\LaravelValidation\\": "src/"
         }
