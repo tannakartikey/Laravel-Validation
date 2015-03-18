@@ -1,4 +1,4 @@
-<?php namespace Dakshhmehta\LaravelValidation;
+<?php namespace Dakshhmehta\LaravelValidation\Exceptions;
 
 use Exception;
 use Illuminate\Validation\Validator;
